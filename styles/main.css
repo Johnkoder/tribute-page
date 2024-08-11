@@ -1,0 +1,218 @@
+/*#0e0e0e - very dark gray*/ 
+/*#ffffff - white*/
+/*#d3d3d3 - light gray*/
+/*#b0b0b0 - slightly darker gray*/
+/*#808080 - darker gray*/
+
+@media (prefers-reduced-motion: no-preference) {
+  *{
+  scroll-behavior: smooth;
+  }
+}
+
+main {
+  padding: 0 160px;
+}
+
+.home  {
+  margin-bottom: 20px;
+}
+
+/* Banner styles */
+.banner {
+  position: relative;
+}
+
+.banner img {
+  box-shadow: 0px 0px 6px rgba(148, 148, 148, 0.5);
+}
+
+.name-info {
+  position: absolute;
+  top: 45%;
+  right: 60px;
+
+  text-align: center;
+  width: 400px;
+  transition: right 0.3s ease-in-out;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #808080;
+}
+
+.quote {
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .name-info {
+    right: 0px;
+  }
+  
+  .name {
+    animation: changeFontSize1 0.3s ease-in-out forwards
+  }
+
+  .quote {
+    animation: changeFontSize2 0.3s ease-in-out forwards;
+  }
+
+  .divider {
+    animation: displayNone 0.3s ease-in-out forwards;
+  }
+}
+
+@keyframes displayNone {
+  to {
+    display: none;
+    width: 0px;
+  }
+}
+
+/* font size animations */
+@keyframes changeFontSize1 {
+  from {
+    font-size: 30px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+
+@keyframes changeFontSize2 {
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 15px;
+  }
+}
+
+/* header styles*/
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.icon {
+  height: 35px;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* underline transition */
+.hover-underline {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.hover-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.hover-underline:hover {
+  color: #b0b0b0;
+}
+
+.hover-underline:hover::before {
+  width: 100%;
+}
+
+.content-title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #b0b0b0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#biography {
+  position: relative;
+}
+
+*[id] {
+  margin-bottom: 50px;
+}
+
+.information {
+  width: 70%;
+  line-height: 24px;
+  margin-left: 20px;
+}
+
+.portrait {
+  position: absolute;
+  height: 250px;
+  width: 200px; 
+  object-fit: cover;
+  border-radius: 50%;
+  top: 70px; 
+  right: 30px;
+  box-shadow: 0px 0px 10px rgba(148, 148, 148, 0.5);
+}
+
+@media (max-width: 1070px) {
+  .portrait {
+    animation: smallerPic 0.3s ease-in-out forwards;
+  }
+
+}
+
+@keyframes smallerPic {
+  from {
+    right: 30px;
+    height: 250px;
+    width: 200px;
+  }
+  to {
+    right: 0px;
+    height: 200px;
+    width: 150px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+footer {
+  margin-bottom: 10px;
+  color: #808080;
+}
+
+footer a {
+  color: unset;
+}
+
+
+
+
+
